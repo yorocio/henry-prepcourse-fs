@@ -22,6 +22,12 @@ function nuevoUsuario(nombre, email, password) {
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
+   let nuevoObjeto = {
+      nombre: nombre,
+      email: email,
+      password: password
+   }
+   return nuevoObjeto;
 }
 
 function agregarPropiedad(objeto, propiedad) {
