@@ -36,6 +36,9 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
+   let object = objeto;
+   object[propiedad] = null;
+   return object;
 }
 
 function invocarMetodo(objeto, metodo) {
