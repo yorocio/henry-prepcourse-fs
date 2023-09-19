@@ -67,6 +67,12 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+   let tienePropiedad = objetoUsuario.hasOwnProperty('email');
+   if (tienePropiedad && objetoUsuario.email != null){
+      return true;
+   } else {
+      return false;
+   }
 }
 
 function tienePropiedad(objeto, propiedad) {
