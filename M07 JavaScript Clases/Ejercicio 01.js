@@ -28,6 +28,9 @@ function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
    // Tu código:
+   Usuario.prototype.saludar = function (){
+      return "Hello World!";
+   }
 }
 
 function agregarStringInvertida() {
