@@ -27,6 +27,8 @@ function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
    // Recibirás las propiedades por parámetro.
    // Retornar la instancia creada.
    // Tu código:
+   let nuevaInstancia = new Persona (nombre, apellido, edad, domicilio);
+   return nuevaInstancia;
 }
 
 function agregarMetodo() {
