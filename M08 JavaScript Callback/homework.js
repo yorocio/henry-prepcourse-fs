@@ -5,6 +5,7 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
+   return nombre[0].toUpperCase()+ nombre.substring(1);
 }
 
 function invocarCallback(cb) {
