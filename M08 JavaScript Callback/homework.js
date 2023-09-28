@@ -41,13 +41,16 @@ function forEach(array, cb) {
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
+   for (let i = 0; i <array.length; i++){
+      cb(array[i])
+   }
 }
 
 function map(array, cb) {
    // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
-   // Tu código:
+   // Tu código:\
 }
 
 function filter(arrayOfStrings) {
