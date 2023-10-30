@@ -20,6 +20,16 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+   let cadena = string.split('').sort();
+   let objeto = {}
+   for (let i = 0; i<cadena.length; i++){
+      if (objeto[cadena[i]]===undefined){
+         objeto[cadena[i]]=1
+      } else {
+         objeto [cadena[i]]=objeto[cadena[i]]+1;
+      }
+   }
+   return objeto;
 }
 
 function capToFront(string) {
