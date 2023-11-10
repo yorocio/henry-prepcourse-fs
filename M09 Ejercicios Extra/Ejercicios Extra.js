@@ -69,6 +69,16 @@ function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   let cadena = numero.toString();
+   let n = cadena.length;
+   let d = n-1;
+   for (let i =0; i<= (n/2)-1; i++){
+      d = (n-1)-i;
+      if (cadena[i] !== cadena[d]){
+         return 'No es capicua';
+      }
+   }
+   return 'Es capicua';
 }
 
 function deleteAbc(string) {
