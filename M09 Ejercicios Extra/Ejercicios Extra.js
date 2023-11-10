@@ -85,6 +85,13 @@ function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   let cadenaFinal = [];
+   for (let i = 0; i<string.length; i++){
+      if (!(string[i]==='a'||string[i]==='b'||string[i]==='c')){
+         cadenaFinal.push(string[i]);
+      }
+   }
+   return cadenaFinal.join('');
 }
 
 function sortArray(arrayOfStrings) {
