@@ -100,6 +100,8 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   let nuevoArreglo = arrayOfStrings.sort((a, b) => a.length-b.length);
+   return nuevoArreglo;
 }
 
 function buscoInterseccion(array1, array2) {
