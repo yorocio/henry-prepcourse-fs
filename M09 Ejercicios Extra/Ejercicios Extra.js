@@ -8,7 +8,7 @@ function deObjetoAarray(objeto) {
    // Tu código:
    let claves = Object.keys(objeto);
    let padre = [];
-   for (let i = 0; i < claves.length; i ++){
+   for (let i = 0; i < claves.length; i++) {
       padre.push([claves[i], objeto[claves[i]]])
    }
    return padre;
@@ -22,11 +22,11 @@ function numberOfCharacters(string) {
    // Tu código:
    let cadena = string.split('').sort();
    let objeto = {}
-   for (let i = 0; i<cadena.length; i++){
-      if (objeto[cadena[i]]===undefined){
-         objeto[cadena[i]]=1
+   for (let i = 0; i < cadena.length; i++) {
+      if (objeto[cadena[i]] === undefined) {
+         objeto[cadena[i]] = 1
       } else {
-         objeto [cadena[i]]=objeto[cadena[i]]+1;
+         objeto[cadena[i]] = objeto[cadena[i]] + 1;
       }
    }
    return objeto;
@@ -71,10 +71,10 @@ function capicua(numero) {
    // Tu código:
    let cadena = numero.toString();
    let n = cadena.length;
-   let d = n-1;
-   for (let i =0; i<= (n/2)-1; i++){
-      d = (n-1)-i;
-      if (cadena[i] !== cadena[d]){
+   let d = n - 1;
+   for (let i = 0; i <= (n / 2) - 1; i++) {
+      d = (n - 1) - i;
+      if (cadena[i] !== cadena[d]) {
          return 'No es capicua';
       }
    }
@@ -86,8 +86,8 @@ function deleteAbc(string) {
    // Retorna el string sin estas letras.
    // Tu código:
    let cadenaFinal = [];
-   for (let i = 0; i<string.length; i++){
-      if (!(string[i]==='a'||string[i]==='b'||string[i]==='c')){
+   for (let i = 0; i < string.length; i++) {
+      if (!(string[i] === 'a' || string[i] === 'b' || string[i] === 'c')) {
          cadenaFinal.push(string[i]);
       }
    }
@@ -100,9 +100,28 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-   let nuevoArreglo = arrayOfStrings.sort((a, b) => a.length-b.length);
-   return nuevoArreglo;
+
+   //version simple usando funciones de javaScript .sort()
+   //let nuevoArreglo = arrayOfStrings.sort((a, b) => a.length-b.length);
+   //return nuevoArreglo;
+
+   const arrayDeLongitudes = arrayOfStrings.map((palabra) => palabra.length)
+   const maximo = Math.max(...arrayDeLongitudes);
+   const arrayFinal = [];
+   while (arrayFinal.length < arrayOfStrings.length) {
+      const min = Math.min(...arrayDeLongitudes);
+      const indicedelMinimo = arrayDeLongitudes.indexOf(min);
+      const palabraMinimo = arrayOfStrings[indicedelMinimo];
+      for (let i = 0; i < arrayOfStrings.length; i++) {
+         if (arrayOfStrings[i] === palabraMinimo) {
+            arrayFinal.push(arrayOfStrings[i]);
+            arrayDeLongitudes[i] = maximo * 10;
+         }
+      }
+   }
+   return arrayFinal;
 }
+
 
 function buscoInterseccion(array1, array2) {
    // Recibes dos arreglos de números.
